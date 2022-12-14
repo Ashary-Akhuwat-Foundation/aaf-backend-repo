@@ -1,6 +1,6 @@
 const mongoose = require('../db/connection');
 
-const artistCapture = new mongoose.Schema(
+const Artist = new mongoose.Schema(
 	{
 		name: {
 			type: String,
@@ -53,8 +53,30 @@ const artistCapture = new mongoose.Schema(
 			required: true,
 		},
 		artWorkImgs: [ArtSchema],
-		basePrice: { Number },
-	}, 
+		priceCategory: { Number },
+		artworkCount: { Number },
+		commitmentDate: { Date },
+		website: { String },
+		igFollowing: { Number },
+		expectedDelivery: { Date },
+		rating: { Number },
+		taxReceipt: {
+			type: String,
+			enum: ['yes', 'no'],
+		},
+		howWasArtistFound: { String },
+		artistBasePrice: { Number },
+		shippingMethod: {
+			type: String,
+			enum: ['Local Pickup', 'Local Delivery', 'International Delivery'],
+		},
+		readyForIGPost: { Boolean },
+		readyForAuctionListing: { Boolean },
+		artworkShipped: { Boolean },
+		artworkReceived: { Boolean },
+		igPostDone: { Boolean },
+		targets: { String },
+	},
 	{
 		timestamps: true,
 		// toJSON: {
@@ -65,7 +87,6 @@ const artistCapture = new mongoose.Schema(
 		// 	},
 		// },
 	}
-    // FINISH THIS MODEL!!!!!!!
 );
 
-module.exports = mongoose.model('ArtistCapture', artistCapture);
+module.exports = mongoose.model('Artist', Artist);
