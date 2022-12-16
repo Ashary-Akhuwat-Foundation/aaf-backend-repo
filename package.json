@@ -24,5 +24,8 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.7.5",
     "nodemo": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack-obfuscator": "^0.17.3"
   }
 }
