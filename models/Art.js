@@ -6,29 +6,22 @@
 //
 
 const mongoose = require('../db/connection');
+const url = require('mongoose-type-url');
 
 const artSchema = new mongoose.Schema(
 	{
-		fileName: {
-			type: String,
+		url: {
+			type: url,
 			required: true,
-		},
-		file: {
-			data: Buffer,
-			contentType: String,
-		},
-		uploadTime: {
-			type: Date,
-			default: Date.now,
 		},
 		description: {
 			type: String,
 			required: true,
 		},
-        artTitle:{
-            type:String,
-            required:true
-        },
+		artTitle: {
+			type: String,
+			required: true,
+		},
 		price: {
 			type: Number,
 			required: true,

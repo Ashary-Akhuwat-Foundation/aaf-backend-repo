@@ -1,4 +1,6 @@
 const mongoose = require('../db/connection');
+// const ArtistDisplayPicSchema = require('../models/ArtistDisplayPic');
+// const ArtSchema = require('../models/Art');
 
 const Artist = new mongoose.Schema(
 	{
@@ -45,14 +47,26 @@ const Artist = new mongoose.Schema(
 
 		location: {
 			type: String,
-			required: true,
 		},
-		artistDisplayPic: [ArtistDisplayPicSchema],
+		artistDisplayPic: [
+			{
+				url: {
+					type: String,
+					required: true,
+				},
+			},
+		],
 		dimensions: {
 			type: String,
-			required: true,
 		},
-		artWorkImgs: [ArtSchema],
+		artWorkImgs: [
+			{
+				url: {
+					type: String,
+					required: true,
+				},
+			},
+		],
 		priceCategory: { Number },
 		artworkCount: { Number },
 		commitmentDate: { Date },
@@ -62,7 +76,6 @@ const Artist = new mongoose.Schema(
 		rating: { Number },
 		taxReceipt: {
 			type: String,
-			enum: ['yes', 'no'],
 		},
 		howWasArtistFound: { String },
 		artistBasePrice: { Number },

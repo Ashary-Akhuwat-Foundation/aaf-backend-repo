@@ -23,6 +23,7 @@
     "hbs": "^4.2.0",
     "lodash": "^4.17.21",
     "mongoose": "^6.7.5",
+    "mongoose-type-url": "^2.1.0",
     "nodemo": "^1.0.0"
   },
   "devDependencies": {
