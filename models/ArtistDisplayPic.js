@@ -1,18 +1,11 @@
 // Upload.js
 const mongoose = require('../db/connection');
+const url = require('mongoose-type-url');
 
 const ArtistDisplayPicSchema = new mongoose.Schema({
-	fileName: {
-		type: String,
+	url: {
+		type: url,
 		required: true,
-	},
-	file: {
-		data: Buffer,
-		contentType: String,
-	},
-	uploadTime: {
-		type: Date,
-		default: Date.now,
 	},
 	artist: {
 		type: mongoose.Schema.Types.ObjectId,
@@ -21,7 +14,4 @@ const ArtistDisplayPicSchema = new mongoose.Schema({
 	},
 });
 
-module.exports = Upload = mongoose.model(
-	'ArtistDisplayPic',
-	ArtistDisplayPicSchema
-);
+module.exports = mongoose.model('ArtistDisplayPic', ArtistDisplayPicSchema);
