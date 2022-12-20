@@ -32,7 +32,7 @@ app.use('/api/Artists/', artistController);
 
 // Comment controller
 const artistCaptureController = require('./controllers/artistCaptureControllers');
-app.use('/comments', artistCaptureController);
+app.use('/artist-capture', artistCaptureController);
 
 // if in the controller, the .catch is thrown and next is invoked, it'll come back here
 const { handleErrors } = require('./middleware/custom_errors');

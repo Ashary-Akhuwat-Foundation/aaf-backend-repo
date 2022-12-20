@@ -9,14 +9,7 @@ const router = express.Router();
 // GET (ALL)  /api/Artists/
 router.get('/', (req, res, next) => {
 	Artist.find()
-		.populate({
-			path: 'ArtistDisplayPic',
-			populate: { path: 'artistDisplayPic', model: 'Artist' },
-		})
-		.populate({
-			path: 'Art',
-			populate: { path: 'artWorkImgs', model: 'Artist' },
-		})
+
 		.then((artist) => res.json(artist))
 		.catch(next);
 });
@@ -48,3 +41,5 @@ router.delete('/:id', (req, res, next) => {
 		.then(() => res.sendStatus(204))
 		.catch(next);
 });
+
+module.exports = router;
