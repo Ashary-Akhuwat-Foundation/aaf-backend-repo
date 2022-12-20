@@ -1,32 +1,33 @@
 {
-  "name": "aaf-backend-repo",
-  "version": "1.0.0",
-  "description": "backend repo for AAF website",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ashary-Akhuwat-Foundation/aaf-backend-repo.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ashary-Akhuwat-Foundation/aaf-backend-repo/issues"
-  },
-  "homepage": "https://github.com/Ashary-Akhuwat-Foundation/aaf-backend-repo#readme",
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "hbs": "^4.2.0",
-    "lodash": "^4.17.21",
-    "mongoose": "^6.7.5",
-    "mongoose-type-url": "^2.1.0",
-    "nodemo": "^1.0.0"
-  },
-  "devDependencies": {
-    "webpack-obfuscator": "^0.17.3"
-  }
+	"name": "aaf-backend-repo",
+	"version": "1.0.0",
+	"description": "backend repo for AAF website",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Ashary-Akhuwat-Foundation/aaf-backend-repo.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Ashary-Akhuwat-Foundation/aaf-backend-repo/issues"
+	},
+	"homepage": "https://github.com/Ashary-Akhuwat-Foundation/aaf-backend-repo#readme",
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"hbs": "^4.2.0",
+		"lodash": "^4.17.21",
+		"mongoose": "^6.7.5",
+		"mongoose-type-url": "^2.1.0",
+		"nodemo": "^1.0.0",
+		"cors": "^2.8.5"
+	},
+	"devDependencies": {
+		"webpack-obfuscator": "^0.17.3"
+	}
 }
